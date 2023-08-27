@@ -1,8 +1,9 @@
 import React from 'react'
+import bg from '../img/background.jpg'
 const Home = () => {
   return (
-    <div className="sec__one">
-      <h1> Home </h1>
+    <div >
+      <img src={bg} alt='background-image' />
     </div>
   )
 }
