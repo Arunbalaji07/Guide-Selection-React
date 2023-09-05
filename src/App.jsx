@@ -4,8 +4,8 @@ import "./App.css";
 
 import Home from "./pages/Home";
 import GuideList from "./pages/GuideList";
-import Admin from "./pages/Admin";
-import Staff from "./pages/Staff";
+import Admin from './pages/Admin';
+import Staff from './pages/Staff';
 import Student from "./pages/Student";
 
 import Navbarmenu from "./Components/Navbarmenu";
