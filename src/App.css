@@ -80,12 +80,14 @@ li {
 }
 .header__middle__logo{
     width: 20%;
-    display: inline-block;
+    margin-top: 8.5px;
+    margin-left: 10px;
+    /* display: inline-block; */
     float: left;
 }
 .header__middle__menus {
     width: 70%;
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
 }
 .menu-item.menu__qqqitem a{
@@ -93,7 +95,7 @@ li {
 }
 .header__middle__search {
     width: 7%;
-    display: inline-block;
+    /* display: inline-block; */
     float: right;
     padding: 36px 3px 27px 3px;
     border-left: 1px solid lavender;
