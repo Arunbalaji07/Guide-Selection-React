@@ -14,7 +14,7 @@ body {
     padding-left:15px;
     margin-right:auto;
     margin-left:auto;
-    background-color: #831238;
+    background-color: #9E1C3F;
 }
 img {
     max-width: 100%;
@@ -58,7 +58,11 @@ ul.main-menu>li.menu-item:first-child {
     margin-left: 0;
 }
 .menu-item {
+    margin-right: -20px;
     line-height: 23px;
+    width: 150px;
+    justify-content: center;
+    text-align: center;
 }
 li {
     list-style-type: none;
@@ -155,10 +159,12 @@ li {
     margin: 7px 27px;
 }
 .menu-item:hover > a{
-    color: #07a8ff !important;
+    background-color: whitesmoke;
+    color: black;
 }
 .menu-item .sub__menus li:hover a{
-    color: #07a8ff !important;
+    background-color: whitesmoke;
+    color: black;
 }
 
 .header__middle__logo img{

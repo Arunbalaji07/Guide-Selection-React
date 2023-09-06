@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto+Condensed:ital@1&family=Roboto+Mono:wght@200&family=Roboto:wght@100;300;400&display=swap");
+.title{
+    width: 100vw;
+    text-align: center;
+    padding: 10px 0px;
+}
+.guides{
+    background-color: rgb(238, 236, 236);
+    margin: 0 auto;
+    align-items: center;
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vw;
+    border-radius: 5px;
+}
+.guide{
+    width: 18.75vw;
+    text-align: center;
+}
+.guide img{
+    border-radius: 5px;
+    height: 200px;
+    padding: 10px;
+}
+#s-name{
+    font-size: medium;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+#s-desc{
+    font-size: Smaller;
+    color: rgb(129, 129, 129);
+    font-weight: 300;
+}
