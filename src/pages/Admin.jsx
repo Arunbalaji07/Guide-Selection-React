@@ -8,7 +8,7 @@ const Admin = () => {
     <div className="sec__one">
       <div className="form">
         <div className="header">
-          <div className="text">Signin</div>
+          <div className="text">Login</div>
           <div className="underline"></div>
         </div>
         <div className="inputs">
@@ -22,7 +22,7 @@ const Admin = () => {
           </div>
         </div>
         <div className="submit-cont">
-          <div className="submit">Signin</div>
+          <div className="submit">Login</div>
         </div>
       </div>
     </div>
