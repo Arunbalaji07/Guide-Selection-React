@@ -1,5 +1,5 @@
 import StudentModel from "../models/student.model.js";
-import { comparePassword, hashPassword, createJWTStudent} from "../../modules/auth.js";
+import { comparePassword,hashPassword,createJWTStudent } from "../modules/auth.js";
 
 export const createStudent = async (req, res) => {
     console.log(req.body)

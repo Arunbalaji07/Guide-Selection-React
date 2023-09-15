@@ -1,5 +1,5 @@
 import StaffModel from "../models/staff.model.js";
-import { comparePassword, hashPassword, createJWTStaff} from "../../modules/auth.js";
+import { comparePassword, hashPassword, createJWTStaff} from "../modules/auth.js";
 import AdminModel from "../models/admin.model.js";
 
 export const createAdmin = async (req, res) => {
@@ -22,7 +22,7 @@ export const createAdmin = async (req, res) => {
 export const adminLogin = async (req, res) => {
     console.log(req.body)
     const user = await AdminModel.findOne({
-        regno: req.body.regno,
+        email: req.body.email,
     })
 
     const isValid = await comparePassword(req.body.password, user.password)

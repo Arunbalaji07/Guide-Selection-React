@@ -6,7 +6,7 @@ import mongoose from "mongoose";
 
 const app = express();
 
-mongoose.connect("mongodb+srv://arunbalaji07:arunbalaji07@prebuild.cdvwgyn.mongodb.net/student-data")
+mongoose.connect("mongodb+srv://arunbalaji07:arunbalaji07@prebuild.cdvwgyn.mongodb.net/data")
 
 app.use(cors());
 app.use(morgan('dev'));

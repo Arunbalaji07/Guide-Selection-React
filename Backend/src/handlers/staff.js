@@ -1,5 +1,5 @@
 import StaffModel from "../models/staff.model.js";
-import { comparePassword, hashPassword, createJWTStaff} from "../../modules/auth.js";
+import { comparePassword, hashPassword, createJWTStaff} from "../modules/auth.js";
 
 export const createStaff = async (req, res) => {
     console.log(req.body)
@@ -21,7 +21,7 @@ export const createStaff = async (req, res) => {
 export const staffLogin = async (req, res) => {
     console.log(req.body)
     const user = await StaffModel.findOne({
-        regno: req.body.regno,
+        email: req.body.email,
     })
 
     const isValid = await comparePassword(req.body.password, user.password)
