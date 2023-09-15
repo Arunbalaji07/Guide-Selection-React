@@ -37,7 +37,7 @@ const Navbarmenu = () => {
         <div className="row">
           {/* Add Logo  */}
           <div className="header__middle__logo">
-            <NavLink exact activeClassName="is-active" to="/">
+            <NavLink activeclassname="is-active" to="/">
               <img src={logo} alt="logo" />
             </NavLink>
           </div>
@@ -70,8 +70,7 @@ const Navbarmenu = () => {
               <ul className={boxClass.join(" ")}>
                 <li className="menu-item">
                   <NavLink
-                    exact
-                    activeClassName="is-active"
+                    activeclassname="is-active"
                     onClick={toggleClass}
                     to={`/`}
                   >
@@ -82,7 +81,7 @@ const Navbarmenu = () => {
                 <li className="menu-item ">
                   <NavLink
                     onClick={toggleClass}
-                    activeClassName="is-active"
+                    activeclassname="is-active"
                     to={`/guide-list`}
                   >
                     {" "}
@@ -103,7 +102,7 @@ const Navbarmenu = () => {
                       {" "}
                       <NavLink
                         onClick={toggleClass}
-                        activeClassName="is-active"
+                        activeclassname="is-active"
                         to={`/admin`}
                       >
                         {" "}
@@ -113,7 +112,7 @@ const Navbarmenu = () => {
                     <li>
                       <NavLink
                         onClick={toggleClass}
-                        activeClassName="is-active"
+                        activeclassname="is-active"
                         to={`/staff`}
                       >
                         {" "}
@@ -123,7 +122,7 @@ const Navbarmenu = () => {
                     <li>
                       <NavLink
                         onClick={toggleClass}
-                        activeClassName="is-active"
+                        activeclassname="is-active"
                         to={`/student`}
                       >
                         {" "}
