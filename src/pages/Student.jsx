@@ -1,30 +1,80 @@
 import React from "react";
-import '../pages/css/Login.css';
-import user from '../img/user.png';
-import password from '../img/password.png';
+import { useState } from "react";
+import "../pages/css/Login.css";
+import user from "../img/user.png";
+import passwordImg from "../img/password.png";
+import Navbarmenu from "../Components/Navbarmenu";
 
 const Student = () => {
+  const [regno, setRegno] = useState();
+  const [password, setPassword] = useState();
+
+  async function Login(event) {
+    event.preventDefault();
+
+    const res = await fetch(`http://localhost:7777/api/login-student`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        regno,
+        password,
+      }),
+    });
+    console.log(res);
+    const data = await res.json();
+    console.log(data);
+    if (data) {
+      alert("success");
+      window.location.href = "/student-dashboard";
+    } else {
+      alert("error");
+    }
+
+    // console.log(data);
+  }
+
   return (
-    <div className="sec__one">
-      <div className="form">
-      <div className="header">
-        <div className="text">Login</div>
-        <div className="underline"></div>
-      </div>
-      <div className="inputs">
-        <div className="input">
-          <img src={user} alt="" />
-          <input type="text" placeholder="Register Number" required />
+    <div>
+      <Navbarmenu />
+      <div className="sec__one">
+        <div className="form">
+          <div className="header">
+            <div className="text">Login</div>
+            <div className="underline"></div>
+          </div>
+          <form>
+            <div className="inputs">
+              <div className="input">
+                <img src={user} alt="" />
+                <input
+                  value={regno}
+                  onChange={(e) => setRegno(e.target.value)}
+                  type="text"
+                  placeholder="Register Number"
+                  required
+                />
+              </div>
+              <div className="input">
+                <img src={passwordImg} alt="" />
+                <input
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  type="password"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+            </div>
+            <div className="forgot-pass">
+              Forgot Password?<span>Click Here</span>
+            </div>
+            <div onClick={Login} className="submit-cont">
+              <div className="submit">Login</div>
+            </div>
+          </form>
         </div>
-        <div className="input">
-          <img src={password} alt="" />
-          <input type="password" placeholder="Password" required/>
-        </div>
-      </div>
-      <div className="forgot-pass">Forgot Password?<span>Click Here</span></div>
-      <div className="submit-cont">
-        <div className="submit">Login</div>
-      </div>
       </div>
     </div>
   );

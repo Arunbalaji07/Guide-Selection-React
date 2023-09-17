@@ -1,6 +1,7 @@
 import React from "react";
 import person from "../img/person.jpeg";
 import "./css/GuideList.css";
+import Navbarmenu from "../Components/Navbarmenu"
 
 const Guides = [
   {
@@ -56,6 +57,7 @@ const Guides = [
 const GuideList = () => {
   return (
     <>
+      <Navbarmenu />
       <h2 className="title">Guides</h2>
       <div className="guides">
         {Guides.map((guide) => {

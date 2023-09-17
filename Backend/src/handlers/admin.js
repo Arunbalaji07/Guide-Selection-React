@@ -2,6 +2,8 @@ import StaffModel from "../models/staff.model.js";
 import { comparePassword, hashPassword, createJWTStaff} from "../modules/auth.js";
 import AdminModel from "../models/admin.model.js";
 
+
+// Create a new Admin
 export const createAdmin = async (req, res) => {
     console.log(req.body)
     try{
@@ -19,6 +21,7 @@ export const createAdmin = async (req, res) => {
     }
 }
 
+// Admin signup
 export const adminLogin = async (req, res) => {
     console.log(req.body)
     const user = await AdminModel.findOne({
