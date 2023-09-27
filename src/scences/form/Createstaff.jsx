@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import './form.css';
 import AdminSidebar from "../global/AdminSidebar";
 import Topbar from "../global/Topbar";
@@ -9,6 +10,32 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 const Createstaff = () => {
     const [theme, colorMode] = useMode();
   
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    async function Submit(event) {
+      event.preventDefault()
+
+      const res = await fetch(`http://localhost:7777/api/register-staff`, {
+        method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        password,
+      }),
+      })
+
+      const data = await res.json()
+
+      if(data) {
+        alert("success")
+      }
+    }
+
     return (
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
@@ -23,6 +50,8 @@ const Createstaff = () => {
                 <form action="#" method="get">
                     <label for="name">Enter Name:</label>
                     <input
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         type="text"
                         name="name"
                         id="name"
@@ -32,6 +61,8 @@ const Createstaff = () => {
                     <br /><br />
                     <label for="email">Email ID:</label>
                     <input
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         type="email"
                         name="email"
                         id="email"
@@ -41,6 +72,8 @@ const Createstaff = () => {
                     <br /><br />
                     <label for="password">Password:</label>
                     <input
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         type="password"
                         name="password"
                         id="tel"
@@ -48,7 +81,7 @@ const Createstaff = () => {
                         required
                     />
                     <br /><br />
-                    <button type="submit" value="Submit">
+                    <button type="submit" value="Submit" onClick={Submit}>
                         Submit
                     </button>
                 </form>
