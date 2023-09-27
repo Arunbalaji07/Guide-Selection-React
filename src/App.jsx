@@ -7,6 +7,7 @@ import GuideList from "./pages/GuideList";
 import Admin from "./pages/Admin";
 import Staff from "./pages/Staff";
 import Student from "./pages/Student";
+import Createstudent from "./scences/form/Createstudent";
 
 // import Navbarmenu from "./Components/Navbarmenu";
 import AdminDashboard from "./scences/dashboard/AdminDashboard";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/staff-dashboard" element={<StaffDashboard />} />
           <Route path="/student-dashboard" element={<StudentDashboard />} />
+          <Route path="/create-student" element={<Createstudent />} />
         </Routes>
       </Router>
     </div>
