@@ -8,11 +8,13 @@ import Admin from "./pages/Admin";
 import Staff from "./pages/Staff";
 import Student from "./pages/Student";
 import Createstudent from "./scences/form/Createstudent";
+import Createstaff from "./scences/form/Createstaff";
 
 // import Navbarmenu from "./Components/Navbarmenu";
 import AdminDashboard from "./scences/dashboard/AdminDashboard";
 import StaffDashboard from "./scences/dashboard/StaffDashboard";
 import StudentDashboard from "./scences/dashboard/StudentDashboard";
+import { Create } from "@mui/icons-material";
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
           <Route path="/staff-dashboard" element={<StaffDashboard />} />
           <Route path="/student-dashboard" element={<StudentDashboard />} />
           <Route path="/create-student" element={<Createstudent />} />
+          <Route path="/create-staff" element={<Createstaff />} />
         </Routes>
       </Router>
     </div>
