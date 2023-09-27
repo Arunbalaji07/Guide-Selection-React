@@ -145,14 +145,14 @@ const AdminSidebar = () => {
             />
             <Item
               title="Create Student"
-              to="/invoices"
+              to="/create-student"
               icon={<PersonAddOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Create Staff"
-              to="/invoices"
+              to="/create-staff"
               icon={<PersonAddOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
