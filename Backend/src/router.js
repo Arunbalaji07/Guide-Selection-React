@@ -1,21 +1,32 @@
 import {Router} from "express";
-import {createStudent, studentLogin} from "./handlers/student.js";
-import {createStaff, staffLogin} from "./handlers/staff.js";
-import {createAdmin, adminLogin} from "./handlers/admin.js";
+import {createStudent, getAllStudent, studentLogin} from "./handlers/student.js";
+import {createStaff, getAllStaff, staffLogin} from "./handlers/staff.js";
+import {createAdmin, adminLogin, getAllAdmin} from "./handlers/admin.js";
 
 const router = Router()
 
+
+// get all students
+router.get('/students', getAllStudent)
 // student signup
 router.post('/register-student', createStudent)
 // student login
 router.post('/login-student', studentLogin)
 
 
+
+
+// get all staff
+router.get('/staffs', getAllStaff)
 // staff signup
 router.post('/register-staff', createStaff)
 // student login
 router.post('/login-staff', staffLogin)
 
+
+
+// get all admin
+router.get('/admin', getAllAdmin)
 // admin signup
 router.post('/register-admin', createAdmin)
 // admin login

@@ -39,3 +39,12 @@ export const adminLogin = async (req, res) => {
     const token = createJWTStaff(user)
     res.json({token})
 }
+
+export const getAllAdmin = async (req, res) => {
+    try {
+        const data = await AdminModel.find()
+        res.json({data: data})
+    } catch (err) {
+        console.error(err)
+    }
+}

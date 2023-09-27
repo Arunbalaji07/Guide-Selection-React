@@ -37,3 +37,12 @@ export const studentLogin = async (req, res) => {
     const token = createJWTStudent(user)
     res.json({token})
 }
+
+export const getAllStudent = async (req, res) => {
+    try {
+        const data = await StudentModel.find()
+        res.json({data: data})
+    } catch (err) {
+        console.error(err)
+    }
+}

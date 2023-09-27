@@ -35,3 +35,12 @@ export const staffLogin = async (req, res) => {
     const token = createJWTStaff(user)
     res.json({token})
 }
+
+export const getAllStaff = async (req, res) => {
+    try {
+        const data = await StaffModel.find()
+        res.json({data: data})
+    } catch (err) {
+        console.error(err)
+    }
+}
