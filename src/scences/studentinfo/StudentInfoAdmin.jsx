@@ -5,7 +5,7 @@ import'./studentinfo.css';
 import Topbar from "../global/Topbar";
 import AdminSidebar from "../global/AdminSidebar";
 
-const Studentinfo = () => {
+const StudentInfoAdmin = () => {
   const [theme, colorMode] = useMode();
   return (
     <ColorModeContext.Provider value={colorMode}>
@@ -49,4 +49,4 @@ const Studentinfo = () => {
   );
 };
 
-export default Studentinfo;
+export default StudentInfoAdmin;
