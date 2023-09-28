@@ -40,7 +40,7 @@ const Admin = () => {
       <div className="sec__one">
         <div className="form">
           <div className="header">
-            <div className="text">Login</div>
+            <div className="text">Admin Login</div>
             <div className="underline"></div>
           </div>
           <form>

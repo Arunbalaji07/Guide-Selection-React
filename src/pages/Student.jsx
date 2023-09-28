@@ -41,7 +41,7 @@ const Student = () => {
       <div className="sec__one">
         <div className="form">
           <div className="header">
-            <div className="text">Login</div>
+            <div className="text">Student Login</div>
             <div className="underline"></div>
           </div>
           <form>
