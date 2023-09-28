@@ -138,7 +138,7 @@ const AdminSidebar = () => {
             />
             <Item
               title="Staff Data"
-              to="/staff-data"
+              to="/staff-data-admin"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

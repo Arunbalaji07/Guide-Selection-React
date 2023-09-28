@@ -10,6 +10,8 @@ import Student from "./pages/Student";
 import Createstudent from "./scences/form/Createstudent";
 import Createstaff from "./scences/form/Createstaff";
 import StudentInfoAdmin from "./scences/studentinfo/StudentInfoAdmin"
+import StaffInfoAdmin from "./scences/staffinfoadmin/StaffInfoAdmin";
+import StudentInfoStaff from "./scences/studentinfo/StudentInfoStaff";
 
 // import Navbarmenu from "./Components/Navbarmenu";
 import AdminDashboard from "./scences/dashboard/AdminDashboard";
@@ -33,7 +35,8 @@ function App() {
           <Route path="/create-student" element={<Createstudent />} />
           <Route path="/create-staff" element={<Createstaff />} />
           <Route path="/student-data-admin" element={<StudentInfoAdmin />} />
-          {/* <Route path="/student-data-staff" element={<Studentinfo />} /> */}
+          <Route path="/student-data-staff" element={<StudentInfoStaff />} />
+          <Route path="/staff-data-admin" element={<StaffInfoAdmin />} />
         </Routes>
       </Router>
     </div>
