@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ColorModeContext, useMode } from "../../theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import "../../index.css";
@@ -7,6 +7,14 @@ import AdminSidebar from "../global/AdminSidebar";
 
 const StaffInfoAdmin = () => {
   const [theme, colorMode] = useMode();
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    fetch(`http://localhost:7777/api/staffs`)
+    .then(res => res.json())
+    .then(data => setData(data))
+    .catch(err => console.log(err))
+  })
 
   return (
     <ColorModeContext.Provider value={colorMode}>
@@ -25,7 +33,7 @@ const StaffInfoAdmin = () => {
             <th>Email</th>
           </tr>
         </thead>
-        {/* <tbody tbody>
+        <tbody tbody>
           {(data.length > 0 ) ? data.map((data, index) => {
             return (
               <tr key={index}>
@@ -37,7 +45,7 @@ const StaffInfoAdmin = () => {
             <td></td>
             <td></td>
             </tr>}
-        </tbody> */}
+        </tbody>
        </table>
      </div> 
           </main>

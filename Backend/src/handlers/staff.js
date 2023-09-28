@@ -39,7 +39,7 @@ export const staffLogin = async (req, res) => {
 export const getAllStaff = async (req, res) => {
     try {
         const data = await StaffModel.find()
-        res.json({data: data})
+        res.json(data)
     } catch (err) {
         console.error(err)
     }
