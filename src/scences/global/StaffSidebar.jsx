@@ -129,7 +129,7 @@ const StaffSidebar = () => {
             </Typography>
             <Item
               title="Student Data"
-              to="/student-data"
+              to="/student-data-staff"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
