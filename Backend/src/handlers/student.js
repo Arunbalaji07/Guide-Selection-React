@@ -41,7 +41,7 @@ export const studentLogin = async (req, res) => {
 export const getAllStudent = async (req, res) => {
     try {
         const data = await StudentModel.find()
-        res.json({data: data})
+        res.json(data)
     } catch (err) {
         console.error(err)
     }
