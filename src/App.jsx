@@ -17,7 +17,9 @@ import StudentInfoStaff from "./scences/studentinfo/StudentInfoStaff";
 import AdminDashboard from "./scences/dashboard/AdminDashboard";
 import StaffDashboard from "./scences/dashboard/StaffDashboard";
 import StudentDashboard from "./scences/dashboard/StudentDashboard";
-import { Create } from "@mui/icons-material";
+import StudentReviewForm from "./scences/ReviewOptions/StudentReviewForm";
+import PPTUpload from "./scences/ReviewOptions/PPTUpload";
+import ReportUpload from "./scences/ReviewOptions/ReportUpload";
 
 function App() {
   return (
@@ -37,6 +39,9 @@ function App() {
           <Route path="/student-data-admin" element={<StudentInfoAdmin />} />
           <Route path="/student-data-staff" element={<StudentInfoStaff />} />
           <Route path="/staff-data-admin" element={<StaffInfoAdmin />} />
+          <Route path="/student-review-form" element={<StudentReviewForm />} />
+          <Route path="/student-upload-ppt" element={<PPTUpload />} />
+          <Route path="/student-upload-report" element={<ReportUpload />} />
         </Routes>
       </Router>
     </div>

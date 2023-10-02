@@ -12,7 +12,7 @@ import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import CampaignOutlinedIcon from '@mui/icons-material/CampaignOutlined';
-
+import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -131,6 +131,27 @@ const StaffSidebar = () => {
               title="Student Data"
               to="/student-data-staff"
               icon={<PeopleOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Review Form"
+              to="/staff-review-form"
+              icon={<FeedOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Reports"
+              to="/staff-reports"
+              icon={<FeedOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="PPT"
+              to="/staff-ppt"
+              icon={<FeedOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />

@@ -145,21 +145,21 @@ const StudentSidebar = () => {
             />
             <Item
               title="Review Form"
-              to="/review-form"
+              to="/student-review-form"
               icon={<FeedOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Upload PPT"
-              to="/upload-ppt"
+              to="/student-upload-ppt"
               icon={<FileUploadOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Upload Report"
-              to="/upload-report"
+              to="/student-upload-report"
               icon={<FileUploadOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

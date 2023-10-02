@@ -88,6 +88,16 @@ const Navbarmenu = () => {
                     Guide List{" "}
                   </NavLink>{" "}
                 </li>
+                <li className="menu-item ">
+                  <NavLink
+                    onClick={toggleClass}
+                    activeclassname="is-active"
+                    to={`/register`}
+                  >
+                    {" "}
+                    Register{" "}
+                  </NavLink>{" "}
+                </li>
                 <li
                   onClick={toggleSubmenu}
                   className="menu-item sub__menus__arrows"
