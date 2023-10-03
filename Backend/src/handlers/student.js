@@ -5,11 +5,17 @@ export const createStudent = async (req, res) => {
     console.log(req.body)
     try{
         const user = await StudentModel.create({
-            name: req.body.name,
-            regno: req.body.regno,
-            batch: req.body.batch,
-            email: req.body.email,
-            password: await hashPassword(req.body.password)
+            member1: req.body.member1,
+            regno1: req.body.regno1,
+            phno1: req.body.phno1,
+            email1: req.body.email1,
+            guide: req.body.guide,
+            title: req.body.title,
+            member2: req.body.member2,
+            regno2: req.body.regno2,
+            phno2: req.body.phno2,
+            email2: req.body.email2,
+            password: await hashPassword(req.body.password),
         })
         const token = createJWTStudent(user)
         res.json({token})
@@ -23,7 +29,7 @@ export const createStudent = async (req, res) => {
 export const studentLogin = async (req, res) => {
     console.log(req.body)
     const user = await StudentModel.findOne({
-        regno: req.body.regno,
+        regno1: req.body.regno1,
     })
 
     const isValid = await comparePassword(req.body.password, user.password)
