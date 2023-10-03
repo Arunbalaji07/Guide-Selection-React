@@ -2,6 +2,7 @@
 .title{
     width: 100vw;
     text-align: center;
+    font-size: 34px;
     padding: 10px 0px;
 }
 .guides{
@@ -17,6 +18,7 @@
 .guide{
     width: 18.75vw;
     text-align: center;
+    padding-bottom: 20px;
 }
 .guide img{
     border-radius: 5px;

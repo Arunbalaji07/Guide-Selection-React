@@ -130,20 +130,6 @@ const StudentSidebar = () => {
               Data
             </Typography>
             <Item
-              title="Student Data"
-              to="/student-data"
-              icon={<PeopleOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Register Project"
-              to="/register-project"
-              icon={<PeopleOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
               title="Review Form"
               to="/student-review-form"
               icon={<FeedOutlinedIcon />}
@@ -171,20 +157,6 @@ const StudentSidebar = () => {
             >
               Others
             </Typography>
-            <Item
-              title="Announcements"
-              to="/announcements"
-              icon={<CampaignOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Calendar"
-              to="/calendar"
-              icon={<CalendarTodayOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
             <Item
               title="Logout"
               to="/"

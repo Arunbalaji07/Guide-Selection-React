@@ -163,20 +163,6 @@ const StaffSidebar = () => {
               Others
             </Typography>
             <Item
-              title="Announcements"
-              to="/announcements"
-              icon={<CampaignOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Calendar"
-              to="/calendar"
-              icon={<CalendarTodayOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
               title="Logout"
               to="/"
               icon={<LogoutOutlinedIcon />}

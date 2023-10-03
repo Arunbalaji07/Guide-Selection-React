@@ -1,56 +1,111 @@
 import React from "react";
 import person from "../img/person.jpeg";
 import "./css/GuideList.css";
-import Navbarmenu from "../Components/Navbarmenu"
+import Navbarmenu from "../Components/Navbarmenu";
+import Subhashini from "../img/subhashini.jpg";
+import Revathy from "../img/revathy.jpg";
+import MaryGlandance from "../img/mary-gladance.jpg";
+import Geetha from "../img/geetha.jpg";
+import SundaraVelRani from "../img/sundara-velrani.jpg";
+import Ramalakshmi from "../img/ramalakshmi.jpg";
+import Sathyaraj from "../img/sathyaraj.jpeg";
+import RaviKarthick from "../img/ravi-karthick.jpeg";
+import RubyAngel from "../img/ruby-angel.jpg";
+import Sageengrana from "../img/sageengrana.jpeg";
+import SivaSakthi from "../img/sivasakthi.jpg";
+import Jenitha from "../img/jenitha.jpg";
+import Jeyanthi from "../img/jeyanthi.jpg";
 
 const Guides = [
   {
-    img: person,
-    name: "Staff 1",
-    description: "Specilization",
+    img: Subhashini,
+    name: "Dr.R.Subhashini",
+    description: "AI, Machine Learning, Deep Learning",
     id: 1,
   },
   {
-    img: person,
-    name: "Staff 2",
-    description: "Specilization",
+    img: Revathy,
+    name: "Dr.S.Revathy",
+    description: "AI, Machine Learning, Deep Learning",
     id: 2,
   },
   {
-    img: person,
-    name: "Staff 3",
-    description: "Specilization",
+    img: MaryGlandance,
+    name: "Dr.L.Mary Gladence",
+    description: "AI, Machine Learning",
     id: 3,
   },
   {
-    img: person,
-    name: "Staff 4",
-    description: "Specilization",
+    img: Jeyanthi,
+    name: "Dr.P.Jeyanthi",
+    description: "Image Mining, Cloud Computing, AI",
     id: 4,
   },
   {
-    img: person,
-    name: "Staff 5",
-    description: "Specilization",
+    img: Geetha,
+    name: "Ms.C.Geetha",
+    description: "Data Mining",
     id: 5,
   },
   {
-    img: person,
-    name: "Staff 6",
-    description: "Specilization",
+    img: SundaraVelRani,
+    name: "Dr.K.Sundaravel Rani",
+    description: "Network secrurity",
     id: 6,
   },
   {
     img: person,
-    name: "Staff 7",
-    description: "Specilization",
+    name: "Dr.Rajasekar",
+    description: "Cloud Computing",
     id: 7,
   },
   {
     img: person,
-    name: "Staff 8",
-    description: "Specilization",
+    name: "Dr.Kamtchi K S",
+    description: "Cyber Security, AI, IOT",
     id: 8,
+  },
+  {
+    img: Ramalakshmi,
+    name: "Ms.D.Ramalakshmi",
+    description: "Data Mining",
+    id: 9,
+  },
+  {
+    img: Jenitha,
+    name: "Ms.J.Merlin Mary Jenitha",
+    description: "AI, Machine Learning, Deep Learning",
+    id: 10,
+  },
+  {
+    img: Sathyaraj,
+    name: "Dr.A.Sathiyaraj",
+    description: "Networking, Data Science ",
+    id: 11,
+  },
+  {
+    img: Sageengrana,
+    name: "Ms.Sageengrana",
+    description: "AI, Machine Learning, Deep Learning",
+    id: 12,
+  },
+  {
+    img: SivaSakthi,
+    name: "Dr.D.Adhimuga Sivasakthi",
+    description: "Wireless Communication",
+    id: 13,
+  },
+  {
+    img: RaviKarthick,
+    name: "Mr.R.Ravi Karthick",
+    description: "Wireless Networks",
+    id: 14,
+  },
+  {
+    img: RubyAngel,
+    name: "Ms. T G Ruby Angel",
+    description: "Cloud Computing",
+    id: 15,
   },
 ];
 

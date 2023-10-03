@@ -16,6 +16,47 @@ const StudentDashboard = () => {
           <StudentSidebar />
           <main className="content">
             <Topbar />
+            <div>
+              <h2>Student Information</h2>
+              <table>
+              <tr>
+                  <th>Project Title</th>
+                  <td>Cell 1</td>
+                </tr>
+                <tr>
+                  <th>Team Member 1</th>
+                  <td>Cell 1</td>
+                </tr>
+                <tr>
+                  <th>Register No 1</th>
+                  <td>Cell 2</td>
+                </tr>
+                <tr>
+                  <th>Guide Name</th>
+                  <td>Cell 2</td>
+                </tr>
+                <tr>
+                  <th>Email 1</th>
+                  <td>Cell 2</td>
+                </tr>
+                <tr>
+                  <th>Phone No 1</th>
+                  <td>Cell 2</td>
+                </tr>
+                <tr>
+                  <th>Team Member 2</th>
+                  <td>Cell 2</td>
+                </tr>
+                <tr>
+                  <th>Register No 2</th>
+                  <td>Cell 2</td>
+                </tr>
+                <tr>
+                  <th>Email 2</th>
+                  <td>Cell 2</td>
+                </tr>
+              </table>
+            </div>
           </main>
         </div>
       </ThemeProvider>
