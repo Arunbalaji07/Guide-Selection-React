@@ -9,7 +9,7 @@ const Register = () => {
     <div>
     <Navbarmenu/>
     <div className='Form'>
-    <form className='content'>
+    <div className='content1'>
         <h2>Registration Form</h2><br/>
         <div className='coloumn'>
         <label>Team Member-1 Name:</label><br/><input
@@ -50,7 +50,7 @@ const Register = () => {
         type='password' name='password' id='password' placeholder='Set your Password' required />
         </div>
         <button type='submit' value='submit' className='btn'>REGISTER</button>
-    </form>
+    </div>
     </div>
     </div>
   );

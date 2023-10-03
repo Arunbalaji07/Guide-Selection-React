@@ -4,13 +4,12 @@
   h2{
     text-align: center;
   }
-  .content {
+  .content1 {
     position: absolute;
-    left: 50vh;
+    left: 60vh;
     margin: 100px;
     max-width: 700px;
     padding: 16px;
-    background-color: white;
   }
   .column{
     width: 50%;
