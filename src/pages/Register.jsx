@@ -6,8 +6,9 @@ const Register = () => {
     const Guide = ["Dr.R.Subhashini", "Dr.S.Revathy", "Dr.P.Jeyanthi", "Dr.L.Mary Gladence","Ms.C.Geetha","Ms.D.Ramalakshmi","Ms.J.Merlin Mary Jenitha","Dr.Rajasekar","Dr.K.Sundaravel Rani","Dr.A.Sathiyaraj","Dr.Kamtchi K S","Dr.D.Adhimuga Sivasakthi","Ms. T G Ruby Angel","Ms.Sageengrana","Mr.R.Ravi Karthick"];
     const [guide, updateGuide] = useState("");
   return (
-    <div className='Form'>
+    <div>
     <Navbarmenu/>
+    <div className='Form'>
     <form className='content'>
         <h2>Registration Form</h2><br/>
         <div className='coloumn'>
@@ -50,6 +51,7 @@ const Register = () => {
         </div>
         <button type='submit' value='submit' className='btn'>REGISTER</button>
     </form>
+    </div>
     </div>
   );
 }
