@@ -13,6 +13,12 @@ import StudentInfoAdmin from "./scences/studentinfo/StudentInfoAdmin"
 import StaffInfoAdmin from "./scences/staffinfoadmin/StaffInfoAdmin";
 import StudentInfoStaff from "./scences/studentinfo/StudentInfoStaff";
 import Register from "./pages/Register";
+import DownloadReviewStaff from "./scences/DownloadStaff/Reviewdownloadstaff";
+import DownloadPptStaff from "./scences/DownloadStaff/Pptdownloadstaff";
+import DownloadReportStaff from "./scences/DownloadStaff/Reportdownloadstaff";
+import DownloadReviewAdmin from "./scences/DownloadAdmin/Reviewdownloadadmin";
+import DownloadPptAdmin from "./scences/DownloadAdmin/Pptdownloadadmin";
+import DownloadReportAdmin from "./scences/DownloadAdmin/Reportdownloadadmin";
 
 // import Navbarmenu from "./Components/Navbarmenu";
 import AdminDashboard from "./scences/dashboard/AdminDashboard";
@@ -21,6 +27,8 @@ import StudentDashboard from "./scences/dashboard/StudentDashboard";
 import StudentReviewForm from "./scences/ReviewOptions/StudentReviewForm";
 import PPTUpload from "./scences/ReviewOptions/PPTUpload";
 import ReportUpload from "./scences/ReviewOptions/ReportUpload";
+
+
 
 function App() {
   return (
@@ -44,6 +52,12 @@ function App() {
           <Route path="/student-upload-ppt" element={<PPTUpload />} />
           <Route path="/student-upload-report" element={<ReportUpload />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/staff-review-form" element={<DownloadReviewStaff />} />
+          <Route path="/staff-reports" element={<DownloadReportStaff />} />
+          <Route path="/staff-ppt" element={<DownloadPptStaff />} />
+          <Route path="/admin-review-form" element={<DownloadReviewAdmin />} />
+          <Route path="/admin-ppt" element={<DownloadPptAdmin />} />
+          <Route path="/admin-reports" element={<DownloadReportAdmin />} />
         </Routes>
       </Router>
     </div>

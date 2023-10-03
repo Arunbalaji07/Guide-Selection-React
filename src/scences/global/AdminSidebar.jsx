@@ -14,6 +14,7 @@ import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import CampaignOutlinedIcon from '@mui/icons-material/CampaignOutlined';
+import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
 
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -157,7 +158,27 @@ const AdminSidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-
+            <Item
+              title="Review Form"
+              to="/admin-review-form"
+              icon={<FeedOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Reports"
+              to="/admin-reports"
+              icon={<FeedOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="PPT"
+              to="/admin-ppt"
+              icon={<FeedOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
             <Typography
               variant="h6"
               color={colors.grey[300]}
