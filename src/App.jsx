@@ -12,6 +12,7 @@ import Createstaff from "./scences/form/Createstaff";
 import StudentInfoAdmin from "./scences/studentinfo/StudentInfoAdmin"
 import StaffInfoAdmin from "./scences/staffinfoadmin/StaffInfoAdmin";
 import StudentInfoStaff from "./scences/studentinfo/StudentInfoStaff";
+import Register from "./pages/Register";
 
 // import Navbarmenu from "./Components/Navbarmenu";
 import AdminDashboard from "./scences/dashboard/AdminDashboard";
@@ -42,6 +43,7 @@ function App() {
           <Route path="/student-review-form" element={<StudentReviewForm />} />
           <Route path="/student-upload-ppt" element={<PPTUpload />} />
           <Route path="/student-upload-report" element={<ReportUpload />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </Router>
     </div>
