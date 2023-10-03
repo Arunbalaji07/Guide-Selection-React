@@ -1,5 +1,4 @@
 import React from "react";
-import person from "../img/person.jpeg";
 import "./css/GuideList.css";
 import Navbarmenu from "../Components/Navbarmenu";
 import Subhashini from "../img/subhashini.jpg";
@@ -15,6 +14,8 @@ import Sageengrana from "../img/sageengrana.jpeg";
 import SivaSakthi from "../img/sivasakthi.jpg";
 import Jenitha from "../img/jenitha.jpg";
 import Jeyanthi from "../img/jeyanthi.jpg";
+import Rajasekar from "../img/Rajasekar.jpeg";
+import Kamtchi from "../img/Kamtchi.jpeg";
 
 const Guides = [
   {
@@ -54,13 +55,13 @@ const Guides = [
     id: 6,
   },
   {
-    img: person,
+    img: Rajasekar,
     name: "Dr.Rajasekar",
     description: "Cloud Computing",
     id: 7,
   },
   {
-    img: person,
+    img: Kamtchi,
     name: "Dr.Kamtchi K S",
     description: "Cyber Security, AI, IOT",
     id: 8,
