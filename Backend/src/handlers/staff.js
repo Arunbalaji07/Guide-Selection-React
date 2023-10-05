@@ -69,7 +69,7 @@ export const getSingleStaff = async (req, res) => {
   
   export const updateStaff = async (req, res) => {
     try {
-      const user = await StaffModel.findByIdAndDelete(
+      const user = await StaffModel.findByIdAndUpdate(
         req.params.id,
         req.body,
         { new: true },
@@ -84,7 +84,7 @@ export const getSingleStaff = async (req, res) => {
   
   export const deleteStaff = async (req, res) => {
     try {
-      const user = await StaffModel.deleteOne(req.params._id);
+      const user = await StaffModel.findByIdAndDelete(req.params._id);
       res.json("deleted");
     } catch (err) {
       console.error(err);

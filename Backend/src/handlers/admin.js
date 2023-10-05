@@ -4,6 +4,7 @@ import AdminModel from "../models/admin.model.js";
 
 
 // Create a new Admin
+
 export const createAdmin = async (req, res) => {
     console.log(req.body)
     try{
@@ -22,6 +23,7 @@ export const createAdmin = async (req, res) => {
 }
 
 // Admin signup
+
 export const adminLogin = async (req, res) => {
     console.log(req.body)
     const user = await AdminModel.findOne({
@@ -40,9 +42,47 @@ export const adminLogin = async (req, res) => {
     res.json({token})
 }
 
+// to get all admin users
+
 export const getAllAdmin = async (req, res) => {
     try {
         const data = await AdminModel.find()
+        res.json({data: data})
+    } catch (err) {
+        console.error(err)
+    }
+}
+// to get single admin
+
+export const getSingleAdmin = async (req, res) => {
+    try {
+        const data = await AdminModel.findById(req.params.id)
+        res.json({data: data})
+    } catch (err) {
+        console.error(err)
+    }
+}
+
+// to update a single admin
+
+export const updateAdmin = async (req, res) => {
+    try {
+        const data = await AdminModel.findByIdAndUpdate(
+            req.params.id,
+            req.body,
+            { new: true },
+        )
+        res.json({data: data})
+    } catch (err) {
+        console.error(err)
+    }
+}
+
+// to delete a single admin
+
+export const deleteAdmin = async (req, res) => {
+    try {
+        const data = await AdminModel.findByIdAndDelete(req.params._id)
         res.json({data: data})
     } catch (err) {
         console.error(err)

@@ -1,7 +1,7 @@
 import {Router} from "express";
 import {createStudent, getAllStudent,getSingleStudent, studentLogin, updateStudent, deleteStudent} from "./handlers/student.js";
 import {createStaff, getAllStaff, getSingleStaff,deleteStaff,staffLogin, updateStaff} from "./handlers/staff.js";
-import {createAdmin, adminLogin, getAllAdmin} from "./handlers/admin.js";
+import {createAdmin, adminLogin, getAllAdmin,getSingleAdmin,updateAdmin,deleteAdmin} from "./handlers/admin.js";
 // import { getAllProjects, registerProject } from "./handlers/register.js";
 
 const router = Router()
@@ -46,6 +46,12 @@ router.get('/admin', getAllAdmin)
 router.post('/register-admin', createAdmin)
 // admin login
 router.post('/login-admin', adminLogin)
+// to get single admin
+router.get('/single-admin/:id', getSingleAdmin)
+// to update a single admin 
+router.put('/update-admin/:id', updateAdmin)
+// to delete a single admin
+router.delete('/delete-admin/:id', deleteAdmin)
 export default router
 
 
