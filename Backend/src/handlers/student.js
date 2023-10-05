@@ -1,54 +1,101 @@
 import StudentModel from "../models/student.model.js";
-import { comparePassword,hashPassword,createJWTStudent } from "../modules/auth.js";
+import { comparePassword, hashPassword, createJWTStudent } from "../modules/auth.js";
+
+// Create a new Student
 
 export const createStudent = async (req, res) => {
-    console.log(req.body)
-    try{
-        const user = await StudentModel.create({
-            member1: req.body.member1,
-            regno1: req.body.regno1,
-            phno1: req.body.phno1,
-            email1: req.body.email1,
-            guide: req.body.guide,
-            title: req.body.title,
-            member2: req.body.member2,
-            regno2: req.body.regno2,
-            phno2: req.body.phno2,
-            email2: req.body.email2,
-            password: await hashPassword(req.body.password),
-        })
-        const token = createJWTStudent(user)
-        res.json({token})
-        // res.json({status:"ok"})
-    } catch(err) {
-        console.log(err)
-        // res.json({status: "error", error: "Duplicate email"})
-    }
-}
+  console.log(req.body);
+  try {
+    const user = await StudentModel.create({
+      name: req.body.name,
+      regno: req.body.regno,
+      batch: req.body.batch,
+      email: req.body.email,
+      password: await hashPassword(req.body.password),
+    });
+    const token = createJWTStudent(user);
+    res.json({ token });
+    // res.json({status:"ok"})
+  } catch (err) {
+    console.log(err);
+    // res.json({status: "error", error: "Duplicate email"})
+  }
+};
+
+// Student Login
 
 export const studentLogin = async (req, res) => {
-    console.log(req.body)
-    const user = await StudentModel.findOne({
-        regno1: req.body.regno1,
-    })
+  console.log(req.body);
+  const user = await StudentModel.findOne({
+    regno: req.body.regno,
+  });
 
-    const isValid = await comparePassword(req.body.password, user.password)
+  if (!user) {
+    res.json({ status: "error", error: "Invalid login" });
+  }
 
-    if(!isValid) {
-        res.status(401)
-        res.json({message: "nope"})
-        return
-    }
+  const isPasswordValid = await comparePassword(
+    req.body.password,
+    user.password,
+  );
 
-    const token = createJWTStudent(user)
-    res.json({token})
-}
+  if (isPasswordValid) {
+    const token = createJWTStudent(user);
+
+    return res.json({ status: "success", user: token });
+  } else {
+    return res.json({ status: "error", user: false });
+  }
+
+};
+
+// Get all students
 
 export const getAllStudent = async (req, res) => {
+  try {
+    const user = await StudentModel.find();
+    res.json(user);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+// Get single  student
+
+export const getSingleStudent = async (req, res) => {
+
     try {
-        const data = await StudentModel.find()
-        res.json(data)
-    } catch (err) {
-        console.error(err)
+        const user = await StudentModel.findOne({
+            regno: req.params.regno
+        })
+
+        res.json(user);
+
+    } catch(err) {
+        res.json(err);
+    }
+}
+
+// Update student
+
+export const updateStudent = async (req, res) => {
+    try {
+        const user = await StudentModel.findByIdAndUpdate(req,user._id, req.body, {
+            new: true
+        })
+        res.json(user);
+    } catch(err) {
+        console.log(err);
+    }
+}
+
+// Delete student
+
+export const deleteStudent = async (req, res) => {
+    try {
+        const user = await StudentModel.deleteOne(req.params._id)
+        res.json("deleted")
+    } catch(err) {
+        console.log(err)
     }
 }
