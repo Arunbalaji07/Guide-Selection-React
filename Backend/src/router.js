@@ -1,7 +1,5 @@
 import {Router} from "express";
 import {createStudent, getAllStudent,getSingleStudent, studentLogin, updateStudent, deleteStudent} from "./handlers/student.js";
-import {createStaff, getAllStaff, staffLogin} from "./handlers/staff.js";
-import {createStudent, getAllStudent, studentLogin} from "./handlers/student.js";
 import {createStaff, getAllStaff, getSingleStaff,deleteStaff,staffLogin, updateStaff} from "./handlers/staff.js";
 import {createAdmin, adminLogin, getAllAdmin} from "./handlers/admin.js";
 // import { getAllProjects, registerProject } from "./handlers/register.js";
