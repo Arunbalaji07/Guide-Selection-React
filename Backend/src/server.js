@@ -6,14 +6,14 @@ import mongoose from "mongoose";
 
 const app = express();
 
-mongoose.connect("mongodb+srv://arunbalaji07:arunbalaji07@prebuild.cdvwgyn.mongodb.net/data")
+mongoose.connect("mongodb+srv://arunbalaji07:arunbalaji07@prebuild.cdvwgyn.mongodb.net/guide-selection")
 
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-//  app.use('/', (req,res) => {
+//   app.use('/', (req,res) => {
 //      res.json({message: 'hello'})
 //  })
 

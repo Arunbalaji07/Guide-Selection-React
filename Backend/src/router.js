@@ -1,6 +1,8 @@
 import {Router} from "express";
 import {createStudent, getAllStudent,getSingleStudent, studentLogin, updateStudent, deleteStudent} from "./handlers/student.js";
 import {createStaff, getAllStaff, staffLogin} from "./handlers/staff.js";
+import {createStudent, getAllStudent, studentLogin} from "./handlers/student.js";
+import {createStaff, getAllStaff, getSingleStaff,deleteStaff,staffLogin, updateStaff} from "./handlers/staff.js";
 import {createAdmin, adminLogin, getAllAdmin} from "./handlers/admin.js";
 // import { getAllProjects, registerProject } from "./handlers/register.js";
 
@@ -25,11 +27,18 @@ router.delete('/delete-student/:id', deleteStudent)
 
 // get all staff
 router.get('/staffs', getAllStaff)
+// get single staff
+router.get('/single-staff/:id', getSingleStaff)
 // staff signup
 router.post('/register-staff', createStaff)
-// student login
+// staff login   
 router.post('/login-staff', staffLogin)
 // stude
+// staff delete TODO: delete
+router.delete('/delete-staff/:id', deleteStaff)
+// to update staff   TODO: update
+router.put('/update-staff/:id', updateStaff)
+
 
 
 
