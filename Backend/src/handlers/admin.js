@@ -81,10 +81,15 @@ export const updateAdmin = async (req, res) => {
 // to delete a single admin
 
 export const deleteAdmin = async (req, res) => {
+    const id = req.params.id;
     try {
-        const data = await AdminModel.findByIdAndDelete(req.params._id)
-        res.json({data: data})
+      const suggest = await AdminModel.findById(id);
+      if(suggest.id === req.params.id) {
+        await suggest.deleteOne()
+        res.json("success")
+      }
+      
     } catch (err) {
-        console.error(err)
+      console.error(err);
     }
-}
+  };

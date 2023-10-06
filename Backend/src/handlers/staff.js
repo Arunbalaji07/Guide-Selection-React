@@ -1,24 +1,16 @@
 import StaffModel from "../models/staff.model.js";
 import { comparePassword, hashPassword, createJWTStaff} from "../modules/auth.js";
-// Create a new staff
+
+// create new staff
+
 export const createStaff = async (req, res) => {
-    console.log(req.body)
-    try{
-        const user = await StaffModel.create({
-            name: req.body.name,
-            email: req.body.email,
-            img: req.body.img,
-            specializations: req.body.specializations,
-            password: await hashPassword(req.body.password)
-        })
-        const token = createJWTStaff(user)
-        res.json({token})
-        res.json({status:"ok"})
-    } catch(err) {
-        console.log(err)
-        res.json({status: "error", error: "Duplicate email"})
+    try {
+      const user = await StaffModel.create(req.body);
+      res.json(user);
+    } catch (err) {
+      console.error(err);
     }
-}
+  };
 // staff login
 export const staffLogin = async (req, res) => {
     console.log(req.body);
@@ -83,9 +75,14 @@ export const getSingleStaff = async (req, res) => {
   // To delete a single staff
   
   export const deleteStaff = async (req, res) => {
+    const id = req.params.id;
     try {
-      const user = await StaffModel.findByIdAndDelete(req.params._id);
-      res.json("deleted");
+      const suggest = await StaffModel.findById(id);
+      if(suggest.id === req.params.id) {
+        await suggest.deleteOne()
+        res.json("success")
+      }
+      
     } catch (err) {
       console.error(err);
     }
