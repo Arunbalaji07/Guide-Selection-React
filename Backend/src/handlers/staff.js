@@ -5,7 +5,13 @@ import { comparePassword, hashPassword, createJWTStaff} from "../modules/auth.js
 
 export const createStaff = async (req, res) => {
     try {
-      const user = await StaffModel.create(req.body);
+      const user = await StaffModel.create({
+        name: req.body.name,
+        email: req.body.email,
+        password: await hashPassword(req.body.password),
+        img: req.body.img,
+        specializations: req.body.specializations
+      });
       res.json(user);
     } catch (err) {
       console.error(err);
