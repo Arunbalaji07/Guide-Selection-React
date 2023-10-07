@@ -2,7 +2,7 @@ import {Router} from "express";
 import {createStudent, getAllStudent,getSingleStudent, studentLogin, updateStudent, deleteStudent} from "./handlers/student.js";
 import {createStaff, getAllStaff, getSingleStaff,deleteStaff,staffLogin, updateStaff} from "./handlers/staff.js";
 import {createAdmin, adminLogin, getAllAdmin,getSingleAdmin,updateAdmin,deleteAdmin} from "./handlers/admin.js";
-// import { getAllProjects, registerProject } from "./handlers/register.js";
+import { getAllProjects, registerProject,getSingleProject,getGuideProject} from "./handlers/register.js";
 
 const router = Router()
 
@@ -54,9 +54,19 @@ router.put('/update-admin/:id', updateAdmin)
 router.delete('/delete-admin/:id', deleteAdmin)
 export default router
 
+// // to get all registeration
+// router.get('/register-all', getAllRegister)
+// // to get a single register
+// router.get('/register/:id', getSingleRegister)
+// // create new register
+// router.post('/register-req', createRegister)
 
 
 // get all projects
-// router.get('/projects', getAllProjects)
+router.get('/projects', getAllProjects)
 // // register project
-// router.post("/register-project", registerProject)
+router.post("/register-project", registerProject)
+// to get a single register
+router.get('/register/:id', getSingleProject)
+// // to get particular register with guide name
+// router.get('/register-guide', getGuideProject)
