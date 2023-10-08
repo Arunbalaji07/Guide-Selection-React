@@ -46,11 +46,11 @@ export const getSingleProject = async (req, res) => {
 
 //   to get particular register with guide name
 
-// export const getGuideProject = async (req, res) => {
-//     try {
-//       const user = await RegisterModel.find({guide: req.params.guide});
-//       res.json(user);
-//     } catch (err) {
-//       console.error(err);
-//     }
-//   };
+export const getGuideProject = async (req, res) => {
+    try {
+      const user = await RegisterModel.find({guide: req.body.guide});
+      res.json(user);
+    } catch (err) {
+      console.error(err);
+    }
+  };

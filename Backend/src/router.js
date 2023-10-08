@@ -68,5 +68,5 @@ router.get('/projects', getAllProjects)
 router.post("/register-project", registerProject)
 // to get a single register
 router.get('/register/:id', getSingleProject)
-// // to get particular register with guide name
-// router.get('/register-guide', getGuideProject)
+// to get particular register with guide name
+router.get('/register-guide', getGuideProject)
